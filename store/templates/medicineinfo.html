@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Medicine Information - Medicine Management{% endblock %}
+
+{% block content %}
+<h1 class="text-success text-center">Medicine Information</h1>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">{{ medicine.name }}</h5>
+                    <p class="card-text">
+                        <strong>Description:</strong> {{ medicine.description }}<br>
+                        <strong>Price:</strong> {{ medicine.price }}<br>
+                        <strong>Expiry Date:</strong> {{ medicine.expiry_date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

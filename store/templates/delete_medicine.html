@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{%block content%}
+<!--
+<form id="deleteForm" method="post" data-url-template="{% url 'delete_medicine' 0 %}">
+    {% csrf_token %}
+    <p>Are you sure you want to delete <span id="medicineName"></span>?</p>
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+-->
+
+
+<form method="post" action="">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{medicine.name}}"?</p>
+    <input type="submit" value="Confirm">
+</form>
+
+
+{% endblock %}

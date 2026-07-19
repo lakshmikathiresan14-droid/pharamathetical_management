@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Medicine Management{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+           
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .content-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="text-center content-container">
+        <h1 class="display-4">Welcome to Medicine Management</h1>
+        <p class="lead">where medicines manage easily</p>
+        <div class="mt-4">
+            <a href="{% url 'signup' %}" class="btn btn-primary btn-lg mx-2">Sign Up</a>
+            <a href="{% url 'login' %}" class="btn btn-primary btn-lg mx-2">Login</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+{% endblock %}
